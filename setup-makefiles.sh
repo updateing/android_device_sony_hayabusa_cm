@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 VENDOR=sony
 DEVICE=hayabusa
@@ -25,7 +25,8 @@ MAKEFILE=../../../$OUTDIR/$DEVICE-vendor-blobs.mk
 # Prebuilt libraries that are needed to build open-source libraries
 PRODUCT_COPY_FILES := \\
     $OUTDIR/proprietary/lib/libaudioalsa.so:obj/lib/libaudioalsa.so \\
-    $OUTDIR/proprietary/lib/libacdbloader.so:obj/lib/libacdbloader.so
+    $OUTDIR/proprietary/lib/libacdbloader.so:obj/lib/libacdbloader.so \\
+    $OUTDIR/proprietary/lib/libv8.so:obj/lib/libv8.so
 
 PRODUCT_COPY_FILES += \\
 EOF
@@ -37,7 +38,16 @@ for FILE in `cat proprietary-files.txt | grep -v ^# | grep -v ^$`; do
     if [ $COUNT = "0" ]; then
         LINEEND=""
     fi
-    echo "    $OUTDIR/proprietary/$FILE:system/$FILE$LINEEND" >> $MAKEFILE
+
+    # Split the file from the destination (format is "file[:destination]")
+    OLDIFS=$IFS IFS=":" PARSING_ARRAY=($FILE) IFS=$OLDIFS
+    FILE=${PARSING_ARRAY[0]}
+    DEST=${PARSING_ARRAY[1]}
+    if [ -z "$DEST" ]; then
+        DEST=$FILE
+    fi
+
+    echo "    $OUTDIR/proprietary/$FILE:system/$DEST$LINEEND" >> $MAKEFILE
 done
 
 (cat << EOF) > ../../../$OUTDIR/$DEVICE-vendor.mk
