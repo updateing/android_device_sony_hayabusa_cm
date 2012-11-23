@@ -39,7 +39,11 @@ PRODUCT_COPY_FILES += \
 
 # sysmon conf
 PRODUCT_COPY_FILES += \
-     $(LOCAL_PATH)/config/sysmon.cfg:system/etc/sysmon.cfg
+    $(LOCAL_PATH)/config/sysmon.cfg:system/etc/sysmon.cfg
+
+# Device specific init part
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/config/init.device.rc:root/init.device.rc
 
 # USB function switching
 PRODUCT_COPY_FILES += \

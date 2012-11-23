@@ -6,6 +6,8 @@ USE_CAMERA_STUB := true
 #inherit from the common blue definitions
 -include device/sony/blue-common/BoardConfigCommon.mk
 
+TARGET_SPECIFIC_HEADER_PATH += device/sony/hayabusa/include
+
 TARGET_KERNEL_CONFIG := cyanogen_blue_hayabusa_defconfig
 
 # Partition information
