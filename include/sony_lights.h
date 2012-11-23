@@ -26,9 +26,9 @@ char const*const LED_FILE_TRIGGER[] 		= {
 	"/sys/class/leds/pwr-red/use_pattern",
 	"/sys/class/leds/pwr-green/use_pattern",
 	"/sys/class/leds/pwr-blue/use_pattern",
-}
-char const*const LED_FILE_TRIGGER		= "/sys/devices/i2c-10/10-0040/use_pattern";
-char const*const LED_FILE_PATTERN		= "/sys/devices/i2c-10/10-0040/pattern_data"
+};
+
+char const*const LED_FILE_PATTERN		= "/sys/devices/i2c-10/10-0040/pattern_data";
 char const*const LED_FILE_DELAYON		= "/sys/devices/i2c-10/10-0040/pattern_delay";
 char const*const LED_FILE_DELAYOFF		= "/sys/devices/i2c-10/10-0040/pattern_duration_secs";
 
