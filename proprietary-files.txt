@@ -31,7 +31,7 @@ bin/ta_param_loader
 bin/ta_qmi_service
 bin/tad
 bin/taimport
-bin/time_daemon
+bin/thermald
 bin/updatemiscta
 bin/usbeng
 bin/usbhub
@@ -189,6 +189,8 @@ lib/libdrmdiag.so
 lib/libdsi_netctrl.so
 lib/libdsutils.so
 lib/libface.so
+lib/libfmradio.so
+lib/libfmradio.sony-iris.so
 lib/libgemini.so
 lib/libgps.utils.so
 lib/libgsl.so
@@ -203,10 +205,10 @@ lib/libmllite.so
 lib/libmlplatform.so
 lib/libmm-abl-oem.so
 lib/libmm-abl.so
+lib/libmm-color-convertor.so
 lib/libmmcamera_faceproc.so
 lib/libmmcamera_frameproc.so
 lib/libmmcamera_statsproc30.so
-lib/libmm-color-convertor.so
 lib/libmmjpeg.so
 lib/libmpl.so
 lib/libnetmgr.so
@@ -235,6 +237,7 @@ lib/libsensor1.so
 lib/libsurfaceflinger_client.so
 lib/libsys-utils.so
 lib/libta.so
+lib/libv8.so
 lib/libwifiscanner.so
 lib/libxml.so
 lib/sysmon/sysmon_batt_therm.so
