@@ -16,7 +16,6 @@ bin/mm-pp-daemon
 bin/mpdecision
 bin/netmgrd
 bin/profiler_daemon
-bin/qmiproxy
 bin/qmuxd
 bin/quipc_igsn
 bin/quipc_main
