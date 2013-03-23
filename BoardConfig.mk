@@ -1,8 +1,3 @@
-USE_CAMERA_STUB := true
-
-# inherit from the proprietary version
--include vendor/sony/hayabusa/BoardConfigVendor.mk
-
 #inherit from the common blue definitions
 -include device/sony/blue-common/BoardConfigCommon.mk
 
@@ -22,10 +17,14 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1056964608
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 2147483648
 BOARD_FLASH_BLOCK_SIZE := 131072
 
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/sony/hayabusa/bluetooth
+
 # Recovery
 TARGET_RECOVERY_INITRC := device/sony/hayabusa/recovery/init.rc
-BOARD_HAS_FLIPPED_SCREEN := true
 BOARD_HAS_NO_SELECT_BUTTON := true
 TARGET_USERIMAGES_USE_EXT4 := true
 
 TARGET_OTA_ASSERT_DEVICE := LT29i,hayabusa
+
+# inherit from the proprietary version
+-include vendor/sony/hayabusa/BoardConfigVendor.mk

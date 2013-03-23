@@ -37,7 +37,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/pre_hw_config.sh:system/etc/pre_hw_config.sh \
     $(LOCAL_PATH)/prebuilt/hw_config.sh:system/etc/hw_config.sh
 
-# Device specific init part
+# Device specific init
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/config/init.device.rc:root/init.device.rc
 
@@ -55,10 +55,8 @@ PRODUCT_COPY_FILES += \
 # Key layouts and touchscreen
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/config/sensor00_f11_sensor0.idc:system/usr/idc/sensor00_f11_sensor0.idc \
-    $(LOCAL_PATH)/config/Button_Jack.kl:system/usr/keylayout/Button_Jack.kl \
-    $(LOCAL_PATH)/config/atmel_mxt_ts.kl:system/usr/keylayout/atmel_mxt_ts.kl \
-    $(LOCAL_PATH)/config/cyttsp-i2c.kl:system/usr/keylayout/cyttsp-i2c.kl \
-    $(LOCAL_PATH)/config/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl
+    $(LOCAL_PATH)/config/pmic8xxx_pwrkey.kl:system/usr/keylayout/pmic8xxx_pwrkey.kl \
+    $(LOCAL_PATH)/config/Button_Jack.kl:system/usr/keylayout/Button_Jack.kl
 
 $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
 
