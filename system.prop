@@ -4,5 +4,3 @@ ro.cwm.enable_key_repeat=true
 # Graphics
 ro.sf.lcd_density=320
 
-#upside down screen
-ro.sf.hwrotation=180
