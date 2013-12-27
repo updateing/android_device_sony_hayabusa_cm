@@ -27,5 +27,7 @@ TARGET_USERIMAGES_USE_EXT4 := true
 
 TARGET_OTA_ASSERT_DEVICE := LT29i,hayabusa
 
+BOARD_HARDWARE_CLASS := device/sony/hayabusa/cmhw
+
 # inherit from the proprietary version
 -include vendor/sony/hayabusa/BoardConfigVendor.mk
