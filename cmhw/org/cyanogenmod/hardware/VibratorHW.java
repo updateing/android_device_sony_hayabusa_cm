@@ -14,11 +14,6 @@
  * limitations under the License.
  */
 
-
-/* Added by Hamster Tian<haotia@gmail.com>
- * For hayabusa,level is from 12 to 31,not begin from 0
- */
-
 package org.cyanogenmod.hardware;
 
 import org.cyanogenmod.hardware.util.FileUtils;

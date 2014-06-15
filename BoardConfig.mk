@@ -5,8 +5,6 @@ TARGET_SPECIFIC_HEADER_PATH += device/sony/hayabusa/include
 
 TARGET_KERNEL_CONFIG := cm_blue_hayabusa_defconfig
 
-COMMON_GLOBAL_CFLAGS += -DLOGO_BACKLIGHT
-
 # Partition information
 BOARD_VOLD_MAX_PARTITIONS := 18
 
@@ -21,11 +19,13 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/sony/hayabusa/bluetooth
 
+TARGET_LS_USE_ALS_NODE := true
+
 # Recovery
 BOARD_HAS_NO_SELECT_BUTTON := true
 TARGET_USERIMAGES_USE_EXT4 := true
 
-TARGET_OTA_ASSERT_DEVICE := LT29i,hayabusa
+TARGET_OTA_ASSERT_DEVICE := lt29i,hayabusa,LT29i
 
 BOARD_HARDWARE_CLASS := device/sony/hayabusa/cmhw
 

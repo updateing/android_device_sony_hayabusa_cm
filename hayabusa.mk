@@ -37,7 +37,8 @@ PRODUCT_COPY_FILES += \
 
 #sensors
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/system/etc/sensors.conf:system/etc/sensors.conf
+    $(LOCAL_PATH)/rootdir/system/etc/sensors.conf:system/etc/sensors.conf \
+    $(LOCAL_PATH)/rootdir/system/etc/sysmon.cfg:system/etc/sysmon.cfg
 
 # Device specific init
 PRODUCT_COPY_FILES += \
