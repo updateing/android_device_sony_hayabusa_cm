@@ -18,7 +18,7 @@ bin/hci_qcomm_init
 #
 # Camera
 #
-lib/hw/camera.qcom.so:lib/hw/vendor-camera.qcom.so
+lib/hw/camera.qcom.so:lib/hw/camera.vendor.qcom.so
 lib/libcamera_clientsemc.so
 lib/libcameralight.so
 lib/libmmcamera_3a_legacy.so
