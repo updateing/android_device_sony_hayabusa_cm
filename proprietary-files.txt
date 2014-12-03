@@ -115,11 +115,8 @@ etc/firmware/dxhdcp2.mdt
 bin/irsc_util
 
 #
-# Lights
+# Sys utils
 #
-bin/illumination_service
-lib/hw/lights.default.so:lib/hw/lights.vendor.default.so
-lib/liblights-core.so
 lib/libsys-utils.so
 
 #
