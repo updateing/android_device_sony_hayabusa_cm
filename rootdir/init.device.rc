@@ -54,8 +54,3 @@ on post-fs
     # write /data/etc/touch_default_module_id 32
     mkdir /data/pc 700 radio radio
 
-on early-boot
-    # this folder is created in post-fs-data by init.qcom.rc
-    # so select early-boot as trigger guarantees this folder exists
-    # prohibit cald from accessing this file
-    exec /system/bin/rm /data/camera/cache_data.dat
