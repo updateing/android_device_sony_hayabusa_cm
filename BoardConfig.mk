@@ -29,5 +29,14 @@ TARGET_OTA_ASSERT_DEVICE := lt29i,hayabusa,LT29i
 
 BOARD_HARDWARE_CLASS := device/sony/hayabusa/cmhw
 
+# Custom sepolicy for hardware
+BOARD_SEPOLICY_DIRS += \
+    device/sony/hayabusa/sepolicy
+
+BOARD_SEPOLICY_UNION += \
+    file_contexts \
+    file.te \
+    vibrator.te
+
 # inherit from the proprietary version
 -include vendor/sony/hayabusa/BoardConfigVendor.mk

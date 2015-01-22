@@ -1,5 +1,6 @@
 on boot
     # Vibrator
+    restorecon /sys/class/timed_output/vibrator/level
     chown system system /sys/class/timed_output/vibrator/level
     chmod 666 /sys/class/timed_output/vibrator/level
 
