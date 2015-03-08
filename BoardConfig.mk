@@ -36,7 +36,7 @@ BOARD_SEPOLICY_DIRS += \
 BOARD_SEPOLICY_UNION += \
     file_contexts \
     file.te \
-    vibrator.te
+    system_server.te
 
 # inherit from the proprietary version
 -include vendor/sony/hayabusa/BoardConfigVendor.mk
